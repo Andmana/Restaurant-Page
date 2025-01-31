@@ -1,8 +1,7 @@
-import homeImg from "./restaurant.jpeg";
+import homeImg from "./assets/images/restaurant.jpeg";
 
 // Fix: Remove the '#' from getElementById
 const content = document.getElementById("content");
-
 function loadHome() {
     content.innerHTML = "";
 
@@ -23,4 +22,4 @@ function loadHome() {
     home.appendChild(image);
 }
 
-export { loadHome, content };
+export { loadHome };
