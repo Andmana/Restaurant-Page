@@ -1,4 +1,4 @@
-import homeImg from "./assets/images/restaurant.jpeg";
+import homeImg from "../assets/images/restaurant.jpeg";
 
 // Fix: Remove the '#' from getElementById
 const content = document.getElementById("content");

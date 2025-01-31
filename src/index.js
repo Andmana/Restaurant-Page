@@ -1,8 +1,7 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
-import { loadHome } from "./home.js";
-import { loadMenus } from "./menu.js";
-import { loadContact } from "./contact.js";
+import { loadHome } from "./pages/home.js";
+import { loadMenus } from "./pages/menu.js";
+import { loadContact } from "./pages/contact.js";
 
 const content = document.getElementById("content");
 function initializePage() {

@@ -1,7 +1,7 @@
-import pancake from "./assets/images/pancake.jpg";
-import pizza from "./assets/images/pizza.jpg";
-import steak from "./assets/images/steak.jpg";
-import Spaghetti from "./assets/images/steak.jpg";
+import pancake from "../assets/images/pancake.jpg";
+import pizza from "../assets/images/pizza.jpg";
+import steak from "../assets/images/steak.jpg";
+import Spaghetti from "../assets/images/steak.jpg";
 
 const menus = ["Steak", "Pizza", "Spaghetti", "Pancake"];
 const prices = [5, 3, 4, 2];
