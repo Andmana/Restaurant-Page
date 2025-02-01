@@ -95,9 +95,6 @@ header {
     z-index: 5;
 }
 
-main {
-}
-
 footer {
     position: relative;
     width: 100%;
@@ -123,4 +120,8 @@ main {
     position: relative;
     min-height: calc(100vh - 220px);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
