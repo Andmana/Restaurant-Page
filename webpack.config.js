@@ -29,6 +29,13 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: "asset/resource", // Webpack 5+ (replaces file-loader)
+                generator: {
+                    filename: "fonts/[name][ext]", // Output fonts to a 'fonts' directory
+                },
+            },
         ],
     },
 };
