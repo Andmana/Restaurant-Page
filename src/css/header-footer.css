@@ -47,7 +47,7 @@ footer .wave4 {
 /* Footer Styles */
 
 footer .wave {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
