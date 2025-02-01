@@ -5,9 +5,10 @@ import { loadHome } from "./pages/home.js";
 import { loadMenus } from "./pages/menu.js";
 import { loadContact } from "./pages/contact.js";
 import { firstLoad } from "./functions/firstLoad.js";
+import { initParallax } from "./functions/parallax.js";
 
 firstLoad();
-
+initParallax();
 const homeBtn = document.querySelector("#home-btn");
 const menuBtn = document.querySelector("#menu-btn");
 const contactBtn = document.querySelector("#contact-btn");

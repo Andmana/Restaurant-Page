@@ -1,0 +1,27 @@
+.description {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 300px;
+    z-index: 101;
+    font-size: large;
+    backdrop-filter: blur(10px);
+}
+
+.parallax-wrap {
+    position: relative;
+    min-height: calc(100vh - 220px);
+    width: 100%;
+    top: 0;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-wrap img {
+    position: absolute;
+    width: 70%;
+    left: 20%;
+    z-index: 3;
+}

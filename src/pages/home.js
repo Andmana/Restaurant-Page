@@ -1,25 +1,31 @@
-import homeImg from "../assets/images/restaurant.jpeg";
-
+import homeImg from "../assets/images/luffy.png";
+import "../css/home.css";
 // Fix: Remove the '#' from getElementById
 const content = document.getElementById("content");
 function loadHome() {
     content.innerHTML = "";
 
-    const home = document.createElement("div");
-    home.id = "Home";
-    content.appendChild(home);
+    const description = document.createElement("div");
+    description.className = "description";
+    content.appendChild(description);
 
     const hero = document.createElement("h1");
-    hero.textContent = "Welcome to MyRest";
-    home.appendChild(hero);
+    hero.textContent = "WELCOME TO NEW WORLD RESTAURANT";
+    description.appendChild(hero);
 
-    const description = document.createElement("p");
-    description.textContent = "Enjoy delicious food for cheap price.";
-    home.appendChild(description);
+    const text = document.createElement("h2");
+    text.textContent =
+        "EMBARK ON A FLAVOR ADVENTURE – TASTE THE SENSATIONS OF THE NEW WORLD!";
+    description.appendChild(text);
+
+    const imageWrap = document.createElement("div");
+    imageWrap.className = "parallax-wrap";
+    content.appendChild(imageWrap);
 
     const image = document.createElement("img");
     image.src = homeImg;
-    home.appendChild(image);
+    image.setAttribute("value", 7);
+    imageWrap.appendChild(image);
 }
 
 export { loadHome };
