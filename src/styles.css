@@ -67,10 +67,41 @@ h6 {
 /*              */
 /****************/
 
+@font-face {
+    font-family: "MyFont";
+    src: url("./assets/fonts/one-piece-font.ttf") format("truetype"); /* Corrected format */
+    font-weight: 900;
+    font-style: normal;
+}
+
 body {
+    font-family: "MyFont", sans-serif;
     background-color: #3586ff;
     position: relative;
     min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    top: 0;
+    z-index: 5;
+}
+
+main {
+    min-height: calc(100vh - 350px);
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
 }
 
 main {
@@ -80,189 +111,10 @@ main {
 
 /****************/
 /*              */
-/*    Navbar    */
-/*      +       */
-/*    footer    */
+/*    Content   */
 /*              */
 /****************/
-/* Header Styles */
-header {
-    position: sticky;
-    width: 100%;
-    height: 100px;
-    background-color: transparent;
-    top: 0;
-}
 
-header .wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("./assets/images/wave2.png");
-    background-size: 1000px 100px;
-    z-index: 10;
-}
-
-header .wave1,
-footer .wave1 {
-    animation: animate 10s linear infinite;
-    opacity: 1;
-}
-
-header .wave2,
-footer .wave2 {
-    animation: animate 15s linear infinite reverse;
-    opacity: 0.5;
-}
-
-header .wave3,
-footer .wave3 {
-    animation: animate 10s linear infinite;
-    opacity: 0.2;
-    bottom: 15px;
-}
-
-header .wave4,
-footer .wave4 {
-    animation: animate 10s linear infinite reverse;
-    opacity: 0.7;
-    bottom: 20px;
-}
-
-/* Footer Styles */
-footer {
-    position: fixed;
-    width: 100%;
-    height: 120px;
-    overflow: hidden;
-    bottom: -30px;
-    left: 0;
-    z-index: 0;
-}
-
-footer .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("./assets/images/wave.png");
-    background-size: 1000px 100px;
-}
-
-/* Keyframe animation */
-@keyframes animate {
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: 1000px;
-    }
-}
-
-/****************/
-/*              */
-/*     Nav      */
-/*    Button    */
-/*              */
-/****************/
-/* From Uiverse.io by 0xnihilism */
-nav {
-    width: 70%;
-    padding-top: 20px;
-    margin: auto;
+#content {
     position: relative;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-button {
-    all: unset; /* This resets all styles to their initial values */
-    display: inline-block; /* Ensures it behaves like a button */
-    cursor: pointer; /* Changes the mouse cursor to indicate it’s clickable */
-    padding: 4px 12px;
-    box-shadow: 0 8px 6px -6px black;
-}
-
-button img {
-    height: 50px;
-}
-
-/* Wobble Top */
-@-webkit-keyframes hvr-wobble-top {
-    16.65% {
-        -webkit-transform: skew(-12deg);
-        transform: skew(-12deg);
-    }
-    33.3% {
-        -webkit-transform: skew(10deg);
-        transform: skew(10deg);
-    }
-    49.95% {
-        -webkit-transform: skew(-6deg);
-        transform: skew(-6deg);
-    }
-    66.6% {
-        -webkit-transform: skew(4deg);
-        transform: skew(4deg);
-    }
-    83.25% {
-        -webkit-transform: skew(-2deg);
-        transform: skew(-2deg);
-    }
-    100% {
-        -webkit-transform: skew(0);
-        transform: skew(0);
-    }
-}
-@keyframes hvr-wobble-top {
-    16.65% {
-        -webkit-transform: skew(-12deg);
-        transform: skew(-12deg);
-    }
-    33.3% {
-        -webkit-transform: skew(10deg);
-        transform: skew(10deg);
-    }
-    49.95% {
-        -webkit-transform: skew(-6deg);
-        transform: skew(-6deg);
-    }
-    66.6% {
-        -webkit-transform: skew(4deg);
-        transform: skew(4deg);
-    }
-    83.25% {
-        -webkit-transform: skew(-2deg);
-        transform: skew(-2deg);
-    }
-    100% {
-        -webkit-transform: skew(0);
-        transform: skew(0);
-    }
-}
-.hvr-wobble-top {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 2px 5px #3586ff5d;
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-}
-.hvr-wobble-top:hover,
-.hvr-wobble-top:focus,
-.hvr-wobble-top:active {
-    -webkit-animation-name: hvr-wobble-top;
-    animation-name: hvr-wobble-top;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
 }
