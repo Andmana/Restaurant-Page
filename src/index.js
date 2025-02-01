@@ -2,14 +2,11 @@ import "./styles.css";
 import { loadHome } from "./pages/home.js";
 import { loadMenus } from "./pages/menu.js";
 import { loadContact } from "./pages/contact.js";
+import { loadButton, homeBtn, menuBtn, contactBtn } from "./pages/body.js";
 
 const content = document.getElementById("content");
 function initializePage() {
     loadHome();
-
-    const homeBtn = document.getElementById("home-btn");
-    const menuBtn = document.getElementById("menu-btn");
-    const contactBtn = document.getElementById("contact-btn");
 
     homeBtn.addEventListener("click", () => {
         content.innerHTML = "";
@@ -25,4 +22,7 @@ function initializePage() {
         loadContact();
     });
 }
-document.addEventListener("DOMContentLoaded", initializePage);
+document.addEventListener("DOMContentLoaded", () => {
+    loadButton();
+    initializePage();
+});
