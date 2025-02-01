@@ -1,28 +1,28 @@
+// entrypoint for the app
+
 import "./styles.css";
 import { loadHome } from "./pages/home.js";
 import { loadMenus } from "./pages/menu.js";
 import { loadContact } from "./pages/contact.js";
-import { loadButton, homeBtn, menuBtn, contactBtn } from "./pages/body.js";
+import { firstLoad } from "./functions/firstLoad.js";
 
-const content = document.getElementById("content");
-function initializePage() {
+firstLoad();
+
+const homeBtn = document.querySelector("#home-btn");
+const menuBtn = document.querySelector("#menu-btn");
+const contactBtn = document.querySelector("#contact-btn");
+
+homeBtn.addEventListener("click", () => {
+    content.innerHTML = "";
     loadHome();
+});
 
-    homeBtn.addEventListener("click", () => {
-        content.innerHTML = "";
-        loadHome();
-    });
-    menuBtn.addEventListener("click", () => {
-        content.innerHTML = "";
-        loadMenus();
-    });
+menuBtn.addEventListener("click", () => {
+    content.innerHTML = "";
+    loadMenus();
+});
 
-    contactBtn.addEventListener("click", () => {
-        content.innerHTML = "";
-        loadContact();
-    });
-}
-document.addEventListener("DOMContentLoaded", () => {
-    loadButton();
-    initializePage();
+contactBtn.addEventListener("click", () => {
+    content.innerHTML = "";
+    loadContact();
 });
