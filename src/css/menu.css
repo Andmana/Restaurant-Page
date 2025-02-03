@@ -67,6 +67,7 @@
 .card-item:hover h1,
 .card-item:hover h3 {
     animation: squeeze3124 0.9s both;
+    z-index: 5;
 }
 
 @keyframes squeeze3124 {
