@@ -14,7 +14,7 @@ Disclaimer: I don't own any image in this repository.
 
 ## Live Demo
 
-[Live Demo](andmana.github.io/Restaurant-Page/)
+[Live Demo](https://andmana.github.io/Restaurant-Page/)
 
 ## Getting Started
 
